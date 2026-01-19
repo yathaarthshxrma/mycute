@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dearest Love - Our Forever Started on December 21st</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script&family=Parisienne&family=Roboto:wght@300;400&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #ffebee, #fff0f5, #fce4ec);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(rgba(139, 0, 0, 0.6), rgba(200, 0, 0, 0.4)), 
+                        url('https://thumbs.dreamstime.com/b/red-rose-surrounded-petals-glowing-heart-shaped-lights-soft-pink-background-symbolizing-love-romance-valentines-day-347835246.jpg') center/cover no-repeat fixed;
+            color: white;
+            text-align: center;
+            padding: 180px 30px 120px;
+            position: relative;
+        }
+
+        header h1 {
+            font-family: 'Parisienne', cursive;
+            font-size: 7em;
+            margin: 0 0 30px;
+            text-shadow: 5px 5px 15px rgba(0,0,0,0.7);
+            animation: softGlow 5s infinite alternate;
+        }
+
+        @keyframes softGlow {
+            from { text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493; }
+            to { text-shadow: 0 0 30px #ff69b4, 0 0 50px #ff1493; }
+        }
+
+        header p.tagline {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.2em;
+            margin: 20px 0;
+        }
+
+        .love-letter {
+            max-width: 850px;
+            margin: -80px auto 100px;
+            background: rgba(255, 250, 250, 0.96);
+            padding: 70px 80px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(220,20,60,0.25);
+            border: 2px dashed #c71585;
+            position: relative;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.9em;
+            color: #222;
+            text-align: center;
+        }
+
+        .love-letter::before {
+            content: "My sweetest love,";
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5em;
+            color: #b22222;
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        .gallery-section {
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            padding: 0 30px;
+        }
+
+        .gallery-section h2 {
+            font-family: 'Parisienne', cursive;
+            text-align: center;
+            color: #c00000;
+            font-size: 5.5em;
+            margin: 0 0 70px;
+            text-shadow: 3px 3px 10px rgba(139,0,0,0.3);
+        }
+
+        .romantic-collage {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            perspective: 1000px;
+        }
+
+        .photo-card {
+            position: relative;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(139,0,0,0.3);
+            transition: all 0.7s ease;
+            transform-style: preserve-3d;
+            background: linear-gradient(135deg, #fff, #ffe4e1);
+            padding: 15px;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-20px) rotateY(8deg) rotateX(5deg);
+            box-shadow: 0 30px 70px rgba(220,20,60,0.45);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 8px solid white;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+            transition: transform 0.8s ease;
+        }
+
+        .photo-card:hover img {
+            transform: scale(1.12);
+        }
+
+        .caption-heart {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 0, 0, 0.85);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.5s ease, bottom 0.5s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        .photo-card:hover .caption-heart {
+            opacity: 1;
+            bottom: 50px;
+        }
+
+        .closing {
+            max-width: 850px;
+            margin: 100px auto 80px;
+            background: rgba(255, 245, 247, 0.97);
+            padding: 80px;
+            border-radius: 35px;
+            box-shadow: 0 15px 50px rgba(199,21,133,0.25);
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.1em;
+            text-align: center;
+            color: #111;
+        }
+
+        .closing .highlight {
+            color: #c71585;
+            font-weight: bold;
+        }
+
+        .signature {
+            font-family: 'Parisienne', cursive;
+            font-size: 5em;
+            color: #b22222;
+            margin: 80px 0 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to right, #8b0000, #c71585, #ff1493);
+            color: white;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .floating-heart {
+            position: fixed;
+            font-size: 3em;
+            color: #ff69b4;
+            pointer-events: none;
+            animation: romanticRise 14s infinite linear;
+            opacity: 0.7;
+            z-index: 10;
+        }
+
+        @keyframes romanticRise {
+            0% { transform: translateY(120vh) rotate(0deg); opacity: 0; }
+            15% { opacity: 1; }
+            85% { opacity: 1; }
+            100% { transform: translateY(-250px) rotate(1080deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- More romantic floating hearts -->
+    <div class="floating-heart" style="left:5%; animation-delay:0s;">💞</div>
+    <div class="floating-heart" style="left:20%; animation-delay:2.5s;">❤️</div>
+    <div class="floating-heart" style="left:38%; animation-delay:5s;">💖</div>
+    <div class="floating-heart" style="left:55%; animation-delay:7.5s;">💕</div>
+    <div class="floating-heart" style="left:72%; animation-delay:10s;">💗</div>
+    <div class="floating-heart" style="left:90%; animation-delay:1s;">💓</div>
+
+    <header>
+        <h1>Our Love Story</h1>
+        <p class="tagline">Forever began on December 21st 2024... when you said yes to us 💍❤️</p>
+    </header>
+
+    <div class="love-letter">
+        <p>Every time I look at these photos  my heart races the same way it did the first time we talked  the first time I saw your smile in person and especially the day I asked you to be mine.</p>
+        <p>You are my dream come true  my safe haven  my greatest adventure. Thank you for filling my life with so much love.</p>
+    </div>
+
+    <section class="gallery-section">
+        <h2> She is mine omg</h2>
+        <div class="romantic-collage">
+            <!-- Replace src with your actual photos -->
+            <div class="photo-card">
+                <img src="https://i.ibb.co/k681Svm3/Screenshot-2026-01-19-at-4-49-57-PM.png">
+                <div class="caption-heart">Your face always make me melt </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://i.ibb.co/nsdbwx75/Screenshot-2026-01-19-at-5-03-53-PM.png">
+                <div class="caption-heart">My baby when she was a baby</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://i.ibb.co/dsdPzM9J/Screenshot-2026-01-19-at-5-06-06-PM.png">
+                <div class="caption-heart">baldyyyy</div>
+            </div>
+            <div class="photo-card">
+                <img src=https://i.ibb.co/xScpHQjF/Screenshot-2026-01-19-at-5-08-48-PM.png >
+                <div class="caption-heart">Devil moment </div>
+            </div>
+            <div class="photo-card">
+                <img src="https://i.ibb.co/HTgLR062/Screenshot-2026-01-19-at-5-10-18-PM.png">
+                <div class="caption-heart">All i can say is awwww</div>
+            </div>
+            <div class="photo-card">
+                <img src="https://i.ibb.co/tphwyVy3/Screenshot-2026-01-19-at-5-13-28-PM.png">
+                <div class="caption-heart">MY DON</div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
+
+    <div class="closing">
+        <p>My love,</p>
+        <p>Since <span class="highlight">I met you</span> you have  been my everything. I promise to cherish you  to make you smile and to love you more  with each passing moment.</p>
+        <p>You are my  home.</p>
+        <div class="signature">Always & Forever<br>Yathaarth 💞</div>
+    </div>
+
+    <footer>
+       For you my cutie
+    </footer>
+
+    <script>
+        // Enhanced hover & scroll reveal
+        const cards = document.querySelectorAll('.photo-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) rotateY(0deg) rotateX(0deg)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(60px) rotateY(-10deg)';
+            card.style.transition = 'all 1s ease-out';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
